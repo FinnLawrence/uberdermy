@@ -109,6 +109,14 @@ html, body {
     @media only screen and (min-width: 601px) {
         @include calc(height, '100vh - 64px');
     }
+    
+    .container {
+        max-width: none;
+    }
+    
+    .background {
+        background-position: 50% 10%;
+    }
 }
 
 .benefit-icon {
@@ -148,7 +156,7 @@ html, body {
 
 .btn-wrapper {
     .btn {
-        margin: 0px 10px;
+        margin: 0px 10px 10px 10px;
     }
 }
 

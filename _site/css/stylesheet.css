@@ -48,6 +48,10 @@ html, body {
       height: -webkit-calc(100vh - 64px);
       height: -o-calc(100vh - 64px);
       height: calc(100vh - 64px); } }
+  #hero .container {
+    max-width: none; }
+  #hero .background {
+    background-position: 50% 10%; }
 
 .benefit-icon {
   display: block;
@@ -70,7 +74,7 @@ html, body {
   background-color: #ABABAB; }
 
 .btn-wrapper .btn {
-  margin: 0px 10px; }
+  margin: 0px 10px 10px 10px; }
 
 footer.page-footer {
   background-color: #010111; }
