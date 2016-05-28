@@ -1,0 +1,161 @@
+---
+---
+
+// ######
+// MIXINS
+// ######
+
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: -o-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin text-shadow($shadow) {
+    -moz-text-shadow: $shadow;
+    -webkit-text-shadow: $shadow;
+    text-shadow: $shadow;
+}
+
+$off-black: #010111;
+$grey-dark: #454545;
+$grey-dark-hover: #666666;
+$grey-light: #989898;
+$grey-light-hover: #ABABAB;
+
+// #######
+// GENERAL
+// #######
+
+html, body {
+    font-family: 'Playfair Display', serif;
+}
+
+.image-background {
+    
+    position: relative;
+    
+    .container  {
+        height: 100%;
+        
+        .row {
+            height: 100%;
+            position: relative;
+            
+            .col {
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                
+                h1 {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+
+    .background {
+        
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        z-index: -10;
+        opacity: 0;
+        background-size: cover;
+        @include transition(opacity 1s);
+
+        img.placeholder {
+            display: none;
+        }
+    }
+}
+
+// ##########
+// NAVIGATION
+// ##########
+
+.navbar-fixed {
+    
+    nav {
+        background-color: $off-black;
+    }
+}
+
+// ########
+// SECTIONS
+// ########
+
+#hero {
+    @include calc(height, '100vh - 56px');
+    
+    @media only screen and (min-width: 601px) {
+        @include calc(height, '100vh - 64px');
+    }
+}
+
+.benefit-icon {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px;
+    
+    i {
+        font-size: 10vw;
+    }
+}
+
+// #####
+// FORMS
+// #####
+
+// #####
+// FORMS
+// #####
+
+.btn, .btn-large {
+    background-color: $grey-dark;
+}
+
+.btn:hover, .btn-large:hover, .btn:focus, .btn-large:focus {
+    background-color: $grey-dark-hover;
+}
+
+.btn.btn-accent, .btn-large.btn-accent {
+    background-color: $grey-light;
+}
+
+.btn.btn-accent:hover, .btn-large.btn-accent:hover, .btn.accent:focus, .btn-large.btn-accent:focus {
+    background-color: $grey-light-hover;
+}
+
+.btn-wrapper {
+    .btn {
+        margin: 0px 10px;
+    }
+}
+
+// ######
+// FOOTER
+// ######
+
+footer.page-footer {
+    background-color: $off-black;
+}

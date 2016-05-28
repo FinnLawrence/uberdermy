@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+    <head>
+        {% include imports.html %}
+        {% include analytics.html %}
+        {% include scripts-critical.html %}
+    </head>
+    <body>
+        <header>
+            {% include navigation.html %}
+        </header>
+        <main>
+            {{ content }}
+        </main>
+        <footer class="page-footer">
+            {% include footer.html %}
+        </footer>
+        
+        {% include scripts.html %}
+    </body>
+</html>
