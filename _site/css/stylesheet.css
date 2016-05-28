@@ -1,14 +1,18 @@
 html, body {
   font-family: 'Playfair Display', serif; }
 
-.image-background {
+section {
+  padding: 50px 0px; }
+
+section.image-background {
   position: relative; }
-  .image-background .container {
-    height: 100%; }
-    .image-background .container .row {
+  section.image-background .container {
+    height: 100%;
+    position: relative; }
+    section.image-background .container .row {
       height: 100%;
       position: relative; }
-      .image-background .container .row .col {
+      section.image-background .container .row .col {
         position: absolute;
         top: 50%;
         -moz-transform: translateY(-50%);
@@ -16,9 +20,9 @@ html, body {
         -ms-transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%); }
-        .image-background .container .row .col h1 {
+        section.image-background .container .row .col h1 {
           font-size: 36px; }
-  .image-background .background {
+  section.image-background .background {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -31,12 +35,24 @@ html, body {
     -o-transition: opacity 1s;
     -webkit-transition: opacity 1s;
     transition: opacity 1s; }
-    .image-background .background img.placeholder {
+    section.image-background .background img.placeholder {
       display: none; }
+  section.image-background .background.color {
+    background-color: #010111;
+    z-index: -20;
+    opacity: 1; }
 
 .navbar-fixed nav {
   background-color: #010111; }
+  .navbar-fixed nav ul a {
+    padding: 0px 25px;
+    font-family: 'Source Sans Pro', sans-serif; }
+  .navbar-fixed nav ul a:hover {
+    background-color: rgba(255, 255, 255, 0.1); }
 
+@media only screen and (min-width: 601px) {
+  nav .brand-logo {
+    padding-left: 15px; } }
 #hero {
   height: -moz-calc(100vh - 56px);
   height: -webkit-calc(100vh - 56px);
@@ -50,8 +66,6 @@ html, body {
       height: calc(100vh - 64px); } }
   #hero .container {
     max-width: none; }
-  #hero .background {
-    background-position: 50% 10%; }
 
 .benefit-icon {
   display: block;
@@ -62,7 +76,8 @@ html, body {
     font-size: 10vw; }
 
 .btn, .btn-large {
-  background-color: #454545; }
+  background-color: #454545;
+  font-family: 'Source Sans Pro', sans-serif; }
 
 .btn:hover, .btn-large:hover, .btn:focus, .btn-large:focus {
   background-color: #666666; }
@@ -77,4 +92,7 @@ html, body {
   margin: 0px 10px 10px 10px; }
 
 footer.page-footer {
-  background-color: #010111; }
+  background-color: #010111;
+  font-family: 'Source Sans Pro', sans-serif; }
+  footer.page-footer .footer-copyright {
+    background-color: rgba(100, 100, 100, 0.1); }

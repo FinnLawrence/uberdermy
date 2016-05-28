@@ -47,22 +47,27 @@ html, body {
     font-family: 'Playfair Display', serif;
 }
 
-.image-background {
-    
+section {
+    padding: 50px 0px;
+}
+
+section.image-background {
+
     position: relative;
-    
+
     .container  {
         height: 100%;
-        
+        position: relative;
+
         .row {
             height: 100%;
             position: relative;
-            
+
             .col {
                 position: absolute;
                 top: 50%;
                 @include transform(translateY(-50%));
-                
+
                 h1 {
                     font-size: 36px;
                 }
@@ -71,7 +76,7 @@ html, body {
     }
 
     .background {
-        
+
         position: absolute;
         top: 0px;
         right: 0px;
@@ -86,6 +91,12 @@ html, body {
             display: none;
         }
     }
+    
+    .background.color {
+        background-color: $off-black;
+        z-index: -20;
+        opacity: 1;
+    }
 }
 
 // ##########
@@ -93,9 +104,26 @@ html, body {
 // ##########
 
 .navbar-fixed {
-    
+
     nav {
         background-color: $off-black;
+        
+        ul {
+            a {
+                padding: 0px 25px;
+                font-family: 'Source Sans Pro', sans-serif;
+            }
+            
+            a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    nav .brand-logo {
+        padding-left: 15px;
     }
 }
 
@@ -105,17 +133,13 @@ html, body {
 
 #hero {
     @include calc(height, '100vh - 56px');
-    
+
     @media only screen and (min-width: 601px) {
         @include calc(height, '100vh - 64px');
     }
-    
+
     .container {
         max-width: none;
-    }
-    
-    .background {
-        background-position: 50% 10%;
     }
 }
 
@@ -124,7 +148,7 @@ html, body {
     width: 100%;
     text-align: center;
     padding: 20px 0px;
-    
+
     i {
         font-size: 10vw;
     }
@@ -140,6 +164,7 @@ html, body {
 
 .btn, .btn-large {
     background-color: $grey-dark;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .btn:hover, .btn-large:hover, .btn:focus, .btn-large:focus {
@@ -166,4 +191,9 @@ html, body {
 
 footer.page-footer {
     background-color: $off-black;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+    .footer-copyright {
+        background-color: rgba(100, 100, 100, 0.1);
+    }
 }
