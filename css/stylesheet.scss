@@ -44,7 +44,15 @@ $grey-light-hover: #ABABAB;
 // #######
 
 html, body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, i {
+    color: $off-black;
+}
+
+a {
+    color: inherit;
 }
 
 section {
@@ -87,12 +95,16 @@ section.image-background {
             display: none;
         }
     }
-    
+
     .background.color {
         background-color: $off-black;
         z-index: -20;
         opacity: 1;
     }
+}
+
+.playfair {
+    font-family: 'Playfair Display', serif;
 }
 
 // ##########
@@ -103,13 +115,12 @@ section.image-background {
 
     nav {
         background-color: $off-black;
-        
+
         ul {
             a {
                 padding: 0px 25px;
-                font-family: 'Source Sans Pro', sans-serif;
             }
-            
+
             a:hover {
                 background-color: rgba(255, 255, 255, 0.1);
             }
@@ -137,26 +148,48 @@ section.image-background {
     .container {
         max-width: none;
     }
-    
+
     h1 {
-        font-size: 30px;
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 30px;
+        font-style: italic;
     }
 }
 
-.benefit-icon {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0px;
+#benefits {
+    
+    h3 {
+        @media only screen and (min-width: 601px) {
+            font-size: 24px;
+        }
+    }
+    
+    .benefit-icon {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
 
-    i {
-        font-size: 10vw;
+        i {
+            font-size: 16vw;
+
+            @media only screen and (min-width: 601px) {
+                font-size: 8vw;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .col {
+            padding-bottom: 30px;
+        }
     }
 }
-
-// #####
-// FORMS
-// #####
 
 // #####
 // FORMS
@@ -164,7 +197,6 @@ section.image-background {
 
 .btn, .btn-large {
     background-color: $grey-dark;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .btn:hover, .btn-large:hover, .btn:focus, .btn-large:focus {
@@ -192,7 +224,7 @@ section.image-background {
 footer.page-footer {
     background-color: $off-black;
     font-family: 'Source Sans Pro', sans-serif;
-    
+
     .footer-copyright {
         background-color: rgba(100, 100, 100, 0.1);
     }

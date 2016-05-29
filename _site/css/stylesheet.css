@@ -1,5 +1,11 @@
 html, body {
-  font-family: 'Playfair Display', serif; }
+  font-family: 'Source Sans Pro', sans-serif; }
+
+h1, h2, h3, h4, h5, h6, p, i {
+  color: #010111; }
+
+a {
+  color: inherit; }
 
 section {
   padding: 50px 0px; }
@@ -40,11 +46,13 @@ section.image-background {
     z-index: -20;
     opacity: 1; }
 
+.playfair {
+  font-family: 'Playfair Display', serif; }
+
 .navbar-fixed nav {
   background-color: #010111; }
   .navbar-fixed nav ul a {
-    padding: 0px 25px;
-    font-family: 'Source Sans Pro', sans-serif; }
+    padding: 0px 25px; }
   .navbar-fixed nav ul a:hover {
     background-color: rgba(255, 255, 255, 0.1); }
 
@@ -65,19 +73,32 @@ section.image-background {
   #hero .container {
     max-width: none; }
   #hero h1 {
-    font-size: 30px; }
+    font-size: 26px;
+    line-height: 1.2; }
+  #hero h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-style: italic; }
 
-.benefit-icon {
+@media only screen and (min-width: 601px) {
+  #benefits h3 {
+    font-size: 24px; } }
+#benefits .benefit-icon {
   display: block;
   width: 100%;
   text-align: center;
   padding: 20px 0px; }
-  .benefit-icon i {
-    font-size: 10vw; }
+  #benefits .benefit-icon i {
+    font-size: 16vw; }
+    @media only screen and (min-width: 601px) {
+      #benefits .benefit-icon i {
+        font-size: 8vw; } }
+@media only screen and (max-width: 600px) {
+  #benefits .col {
+    padding-bottom: 30px; } }
 
 .btn, .btn-large {
-  background-color: #454545;
-  font-family: 'Source Sans Pro', sans-serif; }
+  background-color: #454545; }
 
 .btn:hover, .btn-large:hover, .btn:focus, .btn-large:focus {
   background-color: #666666; }
