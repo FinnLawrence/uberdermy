@@ -67,10 +67,6 @@ section.image-background {
                 position: absolute;
                 top: 50%;
                 @include transform(translateY(-50%));
-
-                h1 {
-                    font-size: 36px;
-                }
             }
         }
     }
@@ -140,6 +136,10 @@ section.image-background {
 
     .container {
         max-width: none;
+    }
+    
+    h1 {
+        font-size: 30px;
     }
 }
 
